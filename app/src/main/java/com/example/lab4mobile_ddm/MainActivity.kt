@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
             Lab4Mobile_DDMTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
-                        name = "Android",
+                        name = "my Android",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
