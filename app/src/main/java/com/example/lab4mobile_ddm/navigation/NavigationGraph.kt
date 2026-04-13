@@ -109,6 +109,7 @@ fun NavigationGraph(
                 arguments = listOf(navArgument("categoryId") { type = NavType.StringType })
             ) { backStackEntry ->
                 val categoryId = backStackEntry.arguments?.getString("categoryId") ?: "coffee"
+                //в крайнем случае перейдем на список cofee,  можно переделать на экран home
                 CategoryScreen(
                     categoryId = categoryId,
                     navController = navController,
@@ -126,10 +127,10 @@ fun NavigationGraph(
                 DetailScreen(
                     recommendationId = recommendationId,
                     categoryId = recommendation?.category ?: "coffee",
+                    //в крайнем случае перейдем на список cofee,  можно переделать на экран home
                     navController = navController,
                     sharedViewModel = sharedViewModel,
-                    drawerState = drawerState,
-                    onDrawerToggle = toggleDrawer
+                    drawerState = drawerState
                 )
             }
 

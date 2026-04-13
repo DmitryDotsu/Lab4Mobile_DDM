@@ -16,7 +16,6 @@ import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -43,8 +42,7 @@ fun DetailScreen(
     categoryId: String,
     navController: NavHostController,
     sharedViewModel: SharedViewModel,
-    drawerState: DrawerState,
-    onDrawerToggle: () -> Unit
+    drawerState: DrawerState
 ) {
     val recommendation by sharedViewModel.selectedRecommendation.collectAsState()
     val currentRecommendation = recommendation ?: sharedViewModel.getRecommendationById(recommendationId)
